@@ -37,7 +37,10 @@ def findCommonTracks(fileNames):
                 pass
         
         #add to a list
+        print len(trackNames)
         trackNameSets.append(trackNames)
+
+    print len(trackNameSets)
     
     #get the set of common tracks
     commonTracks=set.intersection(*trackNameSets)
@@ -51,7 +54,7 @@ def findCommonTracks(fileNames):
         f.close()
         print '%d common tracks found.Track names written to common.txt.'%len(commonTracks)
     else:
-        print 'No common tracks1'
+        print 'No common tracks'
         
 Names=['test-data/maya.xml','test-data/rating.xml']
 
@@ -68,6 +71,9 @@ for line in data:
 
 
 f.close()
+
+
+
 
 
 
